@@ -1,2 +1,2 @@
-# Lottery_Solidity_Contract
+# Lottery Solidity Contract
 Solidity contract for ETH Lottery
