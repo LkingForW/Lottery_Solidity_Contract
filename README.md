@@ -3,7 +3,7 @@
 ### Description 
 Solidity contract for ETH Lottery that allows users to play a part in an ETH Lottery.
 
-### YoutTube Video ![Youtube Icon] (https://raw.githubusercontent.com/LkingForW/Pictures/main/yt.png)
+### YoutTube Video ![Youtube Icon](https://raw.githubusercontent.com/LkingForW/Pictures/main/yt.png)
 https://youtu.be/mLhJ8aj819o
 
 ### Features 
