@@ -3,6 +3,9 @@
 ### Description 
 Solidity contract for ETH Lottery that allows users to play a part in an ETH Lottery.
 
+### YoutTube Video
+https://youtu.be/mLhJ8aj819o
+
 ### Features 
 - Picks Winner 
 - rests Lottery after winner is picked
