@@ -23,6 +23,12 @@ contract Lottery {
         players.push(payable(admin));
     }
     
+    modifier onlyOwner() {
+        require(admin == msg.sender, "You are not the owner");
+        _;
+    }
+    
+    
     /**
      * @dev requires the deposit of 0.1 ether and if met pushes on address on list
      */ 
@@ -41,9 +47,7 @@ contract Lottery {
      * @dev gets the contracts balance
      * @return contract balance
     */ 
-    function getBalance() public view returns(uint){
-        //requires the admin of the account to call the function 
-        require(msg.sender == admin, "You are not the admin");
+    function getBalance() public view onlyOwner returns(uint){
         // returns the contract balance 
         return address(this).balance;
     }
@@ -59,11 +63,8 @@ contract Lottery {
     /** 
      * @dev picks a winner from the lottery, and grants winner the balance of contract
      */ 
-    function pickWinner() public {
-        //only admin can call function
-        // require(msg.sender == admin ,  "You are not the admin");
-        require(players.length >= 10);
-        
+    function pickWinner() public onlyOwner {
+
         //makes sure that we have enough players in the lottery  
         require(players.length >= 3 , "Not enough players in the lottery");
         
