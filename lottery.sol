@@ -34,7 +34,7 @@ contract Lottery {
      */ 
     receive() external payable {
         //require that the transaction value to the contract is 0.1 ether
-        require(msg.value == 0.1 ether , "Must send 0.1 ether amount");
+        require(msg.value >== 0.1 ether , "Must send 0.1 ether amount");
         
         //makes sure that the admin can not participate in lottery
         require(msg.sender != admin);
